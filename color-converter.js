@@ -1,12 +1,12 @@
-/* ducatoz-color.js ver.1.11 by w3schools.com (Do not remove this line)*/
+/* ducatozcolor.js ver.1.11 by w3schools.com (Do not remove this line)*/
 (function () {
-function ducatoz-color(color, elmnt) {
-  if (!(this instanceof ducatoz-color)) { return new ducatoz-color(color, elmnt); }
+function ducatozcolor(color, elmnt) {
+  if (!(this instanceof ducatozcolor)) { return new ducatozcolor(color, elmnt); }
   if (typeof color == "object") {return color; }
   this.attachValues(toColorObject(color));
   if (elmnt) {elmnt.style.backgroundColor = this.toRgbString();}
 }
-ducatoz-color.prototype = {
+ducatozcolor.prototype = {
   toRgbString : function () {
     return "rgb(" + this.red + ", " + this.green + ", " + this.blue + ")";
   },
@@ -596,7 +596,7 @@ function cl(x) {
 function w3trim(x) {
   return x.replace(/^\s+|\s+$/g, '');
 }
-window.ducatoz-color = ducatoz-color;
+window.ducatozcolor = ducatozcolor;
 
 })();
 
@@ -606,7 +606,7 @@ function w3SetColorsByAttribute() {
   for (i = 0; i < z.length; i++) {
     att = z[i].getAttribute("data-w3-color");
     if (att) {
-      z[i].style.backgroundColor = ducatoz-color(att).toRgbString();      
+      z[i].style.backgroundColor = ducatozcolor(att).toRgbString();      
     }
   }
 }
